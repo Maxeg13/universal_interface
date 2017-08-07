@@ -2,6 +2,13 @@
 #include <vector>
 #include <iostream>
 
+void printV(std::vector<float> x)
+{
+    for(int i=0;i<x.size();i++)
+        std::cout<< x[i]<< " ";
+    std::cout<<std::endl;
+}
+
 int main( void ) {
 
 
@@ -13,33 +20,30 @@ int main( void ) {
 
 
 
-        while(1)
-        {
-            f.push_back(3);
-            scanf("%f",&f[cnt-1]);
+    while(1)
+    {
+        f.push_back(3);
+        scanf("%f",&f[cnt-1]);
 
-            scanf("%c",&c);
-            if(c=='\n')break;
+        scanf("%c",&c);
+        if(c=='\n')break;
 
-            if(c==' ')
+        if(c==' ')
             cnt++;
 
-    //        printf("%d\n",cnt);
-        }
+        //        printf("%d\n",cnt);
+    }
+    f.resize(cnt);
 
-        for(int i=0;i<f.size();i++)
-        std::cout<<f[i]<<std::endl;
+    printV(f);
 
-//        while(1)
-//        {
+    while(1)
+    {
+        if(scanf("%f",&f[0])==-1)break;
+        for(int i=1;i<cnt;i++)
+            scanf("%f",&f[i]);
 
-//            f.push_back(3);
-//            scanf("%f",&f[cnt-1]);
-
-
-//            cnt++;
-
-//    //        printf("%d\n",cnt);
-//        }
+        printV(f);
+    }
 
 }
