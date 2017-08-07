@@ -1,24 +1,45 @@
 #include <stdio.h>
+#include <vector>
+#include <iostream>
 
 int main( void ) {
 
 
-
+    std::string s;
     char c;
-    int cnt=0;
-    while(1)
-    {
-        scanf( "%c",&c);
-        if(c=='\n')break;
-        cnt++;
-    }
+    std::vector<float> f;
 
-    float* a;
-    a=new float[cnt];
+    int cnt=1;
 
-    for (int i=0; i<cnt;i++)
-        scanf( "%f", &a[i]  );
 
-    printf( "%4.2f + %4.2f = %4.2f", a[0], a[1], ( a[0]+a[1] ) );
-    return 0;
+
+        while(1)
+        {
+            f.push_back(3);
+            scanf("%f",&f[cnt-1]);
+
+            scanf("%c",&c);
+            if(c=='\n')break;
+
+            if(c==' ')
+            cnt++;
+
+    //        printf("%d\n",cnt);
+        }
+
+        for(int i=0;i<f.size();i++)
+        std::cout<<f[i]<<std::endl;
+
+//        while(1)
+//        {
+
+//            f.push_back(3);
+//            scanf("%f",&f[cnt-1]);
+
+
+//            cnt++;
+
+//    //        printf("%d\n",cnt);
+//        }
+
 }
