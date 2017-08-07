@@ -2,15 +2,23 @@
 
 int main( void ) {
 
-  float* a;
-  a=new float[2];
 
-  for (int i=0; i<2;i++)
-  scanf( "%f", &a[i]  );
 
-//  scanf( "%f", &b );
+    char c;
+    int cnt=0;
+    while(1)
+    {
+        scanf( "%c",&c);
+        if(c=='\n')break;
+        cnt++;
+    }
 
-  printf( "%4.2f + %4.2f = %4.2f", a[0], a[1], ( a[0]+a[1] ) );
+    float* a;
+    a=new float[cnt];
 
-  return 0;
+    for (int i=0; i<cnt;i++)
+        scanf( "%f", &a[i]  );
+
+    printf( "%4.2f + %4.2f = %4.2f", a[0], a[1], ( a[0]+a[1] ) );
+    return 0;
 }
